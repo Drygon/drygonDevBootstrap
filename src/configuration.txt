@@ -1,0 +1,20 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway|Roboto|Roboto+Condensed');
+</style>
+
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Roboto|Roboto+Condensed" rel="stylesheet">
+
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Raleway', sans-serif;
+
+colors: from background picture
+#515751 rgb(81, 87, 81)
+#7b7466 rgb(123, 116, 102)
+#b59f8f rgb(181, 159, 143)
+#5e696f rgb(94, 105, 111)
+#4d4a29 rgb(77, 74, 41)
+
+purple #9f53a6 rgb(159, 83, 166)
