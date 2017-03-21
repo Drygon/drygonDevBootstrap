@@ -1,7 +1,8 @@
 
 import firebase from 'firebase';
 
-const configDev = {
+
+ const configDev = {
     apiKey: "AIzaSyCq5f69XJ6gf-qrVyRNIVF_AZJ3hYQJ81k",
     authDomain: "drygondev.firebaseapp.com",
     databaseURL: "https://drygondev.firebaseio.com",
@@ -9,7 +10,11 @@ const configDev = {
     messagingSenderId: "352491886481"
   };
 
- /* var configTest = {
+firebase.initializeApp(configDev)
+ export const database = firebase.database()
+ export const storage = firebase.storage()
+ 
+   /* var configTest = {
     apiKey: "AIzaSyAJ34lSy1_34snyTBXNS3POiU0KAuPiOgA",
     authDomain: "drygontest.firebaseapp.com",
     databaseURL: "https://drygontest.firebaseio.com",
@@ -25,11 +30,6 @@ const configDev = {
     messagingSenderId: "829435435228"
   };
   */
-
- firebase.initializeApp(configDev)
- export const database = firebase.database()
- export const storage = firebase.storage()
-
 
 export const cloudinaryConfig = {
   cloud_name: "drygonweb",
