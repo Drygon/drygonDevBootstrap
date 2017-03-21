@@ -1,4 +1,4 @@
-# I tried Semantic-ui-react didn't quite work out for what I want to do. Then Bootstrap 4 just released and with react router v4 , so I am going to try it.
+ I tried Semantic-ui-react didn't quite work out for what I want to do. Then Bootstrap 4 just released and with react router v4 , so I am going to try it.
 
 ## setup
 `sudo npm -g i create-reat-app
