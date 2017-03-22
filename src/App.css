@@ -99,32 +99,57 @@ video {
     height: auto !important;
 }
 /*---end homepage---*/
+/*--Setup for all pages--*/
+#page {
+   padding-top: 1.5rem;
+   padding-bottom: 3rem;   
+   margin-top: 10rem;
+}
 
+#page.header,
+#page.footer {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.header {
+    padding-bottom: 1rem;
+    border-bottom: .05rem solid lightgray;
+}
+
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 3rem;
+}
 /*---About page---*/
-#about-page {
-    padding: 11em 0;   
+
+#page .container > h2,
+#page .container > h3 {
+    text-align: center;
 }
 
-#drygon-card {
-  display: block;
-  inline-size: 50%;
-  align-content: center;
-  margin: 3em 0 3em 9em;
+#drygon-card { 
+  width: 50%;
+  height: auto;   
 }
 
-#drygon {
-  display: inline; 
-  max-width: 100%;
+#drygon {  
+  width: 8%; 
   height: auto;
-  object-fit: contain;
+  padding-left: 1rem;  
 }
 
+#drygon-logo {
+    width: 80%;
+    height: auto;
+}
 /*---footer---*/
 footer {   
-   padding: 3em 0 1em 0;
-   text-align: center;	
-   margin-top: 10em;
-   border-top: 1px groove;
+   padding-top: 1.5rem;
+   text-align: center;	  
+   color: #777;
+   border-top: .05rem solid lightgrey;
 }
 
 .icon {

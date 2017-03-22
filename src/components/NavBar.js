@@ -77,7 +77,7 @@ class NavBar extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: false
     }
   }
 
