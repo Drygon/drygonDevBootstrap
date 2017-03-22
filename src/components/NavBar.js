@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Collapse, Nav, Navbar, NavbarBrand, NavItem, NavLink, NavbarToggler } from 'reactstrap';
+import { Collapse, Nav, Navbar, NavbarBrand, NavDropdown,DropdownItem, DropdownMenu, DropdownToggle, NavItem, NavLink, NavbarToggler } from 'reactstrap';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import RouteWithSubRoutes from './RouteWithSubRoutes';
-import { AboutPage, DrawingsPage, HomePage } from '../layout';
+import { AboutUsPage, ContactUsPage, DrawingsPage, HomePage } from '../layout';
+
 import logo from '../images/logo_name.png';
 
 const routes = [
@@ -11,10 +12,12 @@ const routes = [
     component: HomePage,
     exact: true
   }
-  ,{ 
-    path: '/about',
-    component: AboutPage,    
- },
+  ,{ path: '/aboutus',
+     component: AboutUsPage
+  }
+  ,{ path: '/contactus',
+     component: ContactUsPage
+  },
  {
    path: '/drawings',
    component: DrawingsPage,
@@ -23,18 +26,32 @@ const routes = [
 
 const style={fontWeight: 'bold'}
 
-const Links = ({ toggleNavbar, collapsed, isActive }) => (
-  <div>
-    <Navbar fixed="top" color="faded" light toggleable>      
+const Links = ({ toggle, collapsed }) => (
+  <div className="nav-outter">
+    <Navbar fixed="top" color="faded" light toggleable >      
         <NavbarBrand tag={RRNavLink} to="/" activeClassName="active">        
-       <img id="logo" className="img-responsive" src={logo} alt="Drygon Logo" />
+       <img id="logo-nav" className="img-responsive" src={logo} alt="Drygon Logo" />
        </NavbarBrand>                   
-      <NavbarToggler right onClick={toggleNavbar} />
+      <NavbarToggler right onClick={toggle} />
       <Collapse className="navbar-toggleable-md" isOpen={collapsed} navbar>
-        <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink to="/about" activeClassName="active" activeStyle={style} tag={RRNavLink}>About Us</NavLink>
-          </NavItem>
+        <Nav className="ml-auto mb-4" navbar pills fill>
+          <NavDropdown isOpen={collapsed} toggle={toggle}>
+          <DropdownToggle nav caret>
+            About Us
+          </DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem to="/aboutus" 
+            activeClassName="active" 
+            activeStyle={style} 
+            tag={RRNavLink} >Drygon Consulting Inc.
+            </DropdownItem>
+            <DropdownItem to="/contactus" 
+            activeClassName="active" 
+            activeStyle={style} 
+            tag={RRNavLink}>Contact Us
+            </DropdownItem>
+          </DropdownMenu> 
+          </NavDropdown>
           <NavItem>
             <NavLink to="/drawings" activeClassName="active" activeStyle={style} tag={RRNavLink}>Drawings</NavLink>
           </NavItem>
@@ -56,16 +73,15 @@ const Links = ({ toggleNavbar, collapsed, isActive }) => (
 );
 
 class NavBar extends Component {
-
   constructor(props) {
     super(props);
-    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.toggle = this.toggle.bind(this);
     this.state = {
       collapsed: true
     }
   }
 
-  toggleNavbar() {
+  toggle() {
     this.setState({
       collapsed: !this.state.collapsed
     });
@@ -74,7 +90,7 @@ class NavBar extends Component {
  render() {    
     return (
       <div>
-        <Links toggleNavbar={this.toggleNavbar} 
+        <Links toggle={this.toggle}
         collapsed={this.state.collapsed} />
         
         {routes.map((route, i) => (
