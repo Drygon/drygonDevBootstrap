@@ -144,6 +144,12 @@ video {
     width: 80%;
     height: auto;
 }
+
+#map {
+    margin-top: 5rem;
+    height: 400px;
+    width: 400px;
+}
 /*---footer---*/
 footer {   
    padding-top: 1.5rem;
