@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'reactstrap';
-import logo from '../images/logo_name.png';
+import logo from '../images/logo_name_50.png';
 import drygonCard from '../images/drygon_card.svg';
 
 const DrygonConsulting = () => (  

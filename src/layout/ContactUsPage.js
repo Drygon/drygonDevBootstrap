@@ -1,11 +1,14 @@
 import React from 'react';
+import { Container } from 'reactstrap';
 import { ContactUs, Footer } from '../components';
 
 const ContactUsPage = () => (
- <div id="page">        
-        <ContactUs />        
+    <Container id="main-wrapper">
+    <div id="main">
+        <ContactUs />
+        </div>
         <Footer />
-    </div>
+    </Container>
 );
 
 export default ContactUsPage;

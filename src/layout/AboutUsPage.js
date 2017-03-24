@@ -3,9 +3,11 @@ import { Container } from 'reactstrap';
 import { DrygonConsulting, Footer } from '../components';
 
 const AboutUsPage = () => (
-    <div id="page">
-        <Container className="text-left">       
-            <DrygonConsulting />
+    <div id="main-wrapper">
+        <Container id="main">
+            <Container className="text-left">
+                <DrygonConsulting />
+            </Container>
         </Container>
         <Footer />
     </div>

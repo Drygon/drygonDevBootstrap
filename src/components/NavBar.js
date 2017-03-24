@@ -4,7 +4,7 @@ import { NavLink as RRNavLink } from 'react-router-dom';
 import RouteWithSubRoutes from './RouteWithSubRoutes';
 import { AboutUsPage, ContactUsPage, DrawingsPage, HomePage } from '../layout';
 
-import logo from '../images/logo_name.png';
+import logo from '../images/logo_name_75.png';
 
 const routes = [
   { 
@@ -27,14 +27,14 @@ const routes = [
 const style={fontWeight: 'bold'}
 
 const Links = ({ toggle, collapsed }) => (
-  <div className="nav-outter">
+  <div id="nav">
     <Navbar fixed="top" color="faded" light toggleable >      
         <NavbarBrand tag={RRNavLink} to="/" activeClassName="active">        
        <img id="logo-nav" className="img-responsive" src={logo} alt="Drygon Logo" />
        </NavbarBrand>                   
-      <NavbarToggler right onClick={toggle} />
+      <NavbarToggler onClick={toggle} />
       <Collapse className="navbar-toggleable-md" isOpen={collapsed} navbar>
-        <Nav className="ml-auto mb-4" navbar pills fill>
+        <Nav className="ml-auto mb-4" navbar>
           <NavDropdown isOpen={collapsed} toggle={toggle}>
           <DropdownToggle nav caret>
             About Us
@@ -77,7 +77,7 @@ class NavBar extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      collapsed: false
+      collapsed: true
     }
   }
 

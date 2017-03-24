@@ -1,21 +1,23 @@
 import React from 'react';
 import { CardDeck, Container, Row } from 'reactstrap';
-import { DrawingSnap, Footer, Header, PhotoSnap, QuotationSnap } from '../components';
+import { Banner, DrawingSnap, Footer, PhotoSnap, QuotationSnap } from '../components';
 
 const HomePage = () => (
   <div>
-    <Header />
-    <Container>
-      <Row id="home-row-top">        
+    <Banner />
+    <div id="main-wrapper">
+    <Container id="main">
+      <Row>        
           <DrawingSnap />        
       </Row>
-      <Row id="home-row-bottom">
+      <Row>
         <CardDeck>
           <PhotoSnap />
           <QuotationSnap />
         </CardDeck>
       </Row>
     </Container>
+    </div>
     <Footer />
 </div>
 );
